@@ -4,8 +4,8 @@
 ### pythonanywhere部署可用
 http://biubiubiu.pythonanywhere.com/  
 ### 一共2个页面
-- 页面一：entry.html 
-- 页面二：Unemployment.html
+- 页面一：entry.html: 该页面是首页，用到的页面请求方法是GET，主要的页面功能是：点击页面上的按钮能够跳转回到对应的图表页面  
+- 页面二：Unemployment.html：该页面是二级页面，通过点击entry.html页面的按钮，使用POST方法，跳转到该页面。此页面主要的功能是接受到用户的post指令之后，返回对应的数据和图表内容。
 ### 数据传递描述：
 - “/”：用户通过输入url点击搜索 → 页面的请求方式为“GET” → 返回页面1  
 - “/data”：用户点击“/”页面的按钮 → 页面请求方式为“POST” → data_str = df.to_html() 将dataframe呈现为HTML表格 → the_res = data_str → 在名为“Unemployment.html”的文档中，有{{the_res}}jinjia可传递python文档中data_str数据的语法 → 为用户返回含有df的表格数据的“/data”  
