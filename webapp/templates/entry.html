@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<head>
+    <title>女性生存环境分析</title>
+    <link rel="stylesheet" href="../static/layout.css" type="text/css">
+</head>
+<body>
+<div>
+<!--左边大框-->
+<h1>{{title}}</h1>
+<h3>{{content}}</h3>
+<p>{{content_2}}</p>
+<div class="left">
+	<!--标题-->
+    <form method="post" action="/世界儿童失学儿童数量（折线图）">
+	<button class="Drop_out_of_school">世界儿童失学儿童数量（折线图）</button>
+    </form>
+	<form method="post" action="/15-19岁女性生育率（地图）">
+	<button class="fertility_rate">15-19岁女性生育率（地图）</button>
+    </form>
+	<form method="post" action="/女性高等教育入学率与中学入学率">
+	<button class="Enrolment_rate">女性高等教育入学率与中学入学率</button>
+    </form>
+    <form method="post" action="/世界女性失业率（地图）">
+	<button class="Unemployment">世界女性失业率（地图）</button>
+    </form>
+	<form method="post" action="/世界女性失业率（折线图）">
+	<button class="Umemployment_rate">世界女性失业率（折线图）</button>
+    </form>
+	<form method="post" action="/世界女性产假周数与报酬情况">
+	<button class="Maternity_leave">世界女性产假周数与报酬情况</button>
+    </form>
+	<form method="post" action="/data">
+	<button class="data">data</button>
+    </form>
+</div>
+
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+</form>
+</body>
+{% endblock %}
